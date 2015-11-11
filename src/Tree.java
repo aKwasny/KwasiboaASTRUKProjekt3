@@ -2,31 +2,22 @@
  * Created by Andrzej on 2015-10-31.
  */
 public class Tree {
+    Node head;
 
-    private class Node () {
-        class Item {
-            private double value;
-            private int index;
+    public Tree {
+        head = null;
+    }
+
+    public void add (int index, double value) {
+        if (head == null) {
+            head = new Node(index, value);
+        } else {
+            head.insert(index, value);
         }
-        class Node *left *right
-    } *root;
-
-    public void insert (int i, double v) {
-
     }
 
-    double get (int i) {
-
+    public double get (int index) {
+        return head.get(index);
     }
 
-    void Test () {
-        Test(root);
-    }
-
-    void Test (class Node *r) {
-        if (r == 0) return;
-        Test(r->left);
-        //drukowanie zawartoœci np cout << '\n indeks= " << r->index << " war=" << r->value;
-        Test(r->right);
-    }
 }
