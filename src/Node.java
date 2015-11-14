@@ -65,5 +65,20 @@ public class Node {
         return 0;
     }
 
+    public void eject (int depthLevel) {
+        if (this.right != null) {
+            this.right.eject(depthLevel + 1);
+        }
 
+        String spaceBetween = "";
+        for (int i = 0; i < depthLevel; i++) {
+            spaceBetween = spaceBetween + "                    ";
+        }
+
+        System.out.println(spaceBetween + index + "----> " + value);
+
+        if (this.left != null) {
+            this.left.eject(depthLevel + 1);
+        }
+    }
 }

@@ -4,7 +4,7 @@
 public class Tree {
     Node head;
 
-    public Tree {
+    public Tree () {
         head = null;
     }
 
@@ -18,6 +18,14 @@ public class Tree {
 
     public double get (int index) {
         return head.get(index);
+    }
+
+    public void eject () {
+        if (head == null) {
+            System.out.println("The tree is empty!");
+        } else {
+            head.eject(0);
+        }
     }
 
 }
